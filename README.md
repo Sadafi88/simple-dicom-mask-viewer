@@ -9,13 +9,13 @@ Supports:
 
 ## Features
 
-* Read DICOM images
-* Read NIfTI volumes
-* Middle-slice visualization for 3D volumes (Currently displays the middle slice for 3D medical volumes)
-* Automatic windowing
-* Custom window center/width
-* Segmentation mask overlay
-* Save visualization output
+- Read DICOM images
+- Read NIfTI volumes
+- Middle-slice visualization for 3D medical volumes
+- Automatic windowing
+- Custom window center/width
+- Segmentation mask overlay
+- Save visualization output
 
 ## Installation
 
