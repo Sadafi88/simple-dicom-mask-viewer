@@ -94,6 +94,8 @@ def main():
     args = parser.parse_args()
 
     image, ds = load_dicom(args.dicom)
+    if image.ndim == 3:
+       image = image[image.shape[0] // 2]
 
     window_center = args.window_center
     window_width = args.window_width
