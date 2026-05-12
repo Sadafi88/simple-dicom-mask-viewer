@@ -85,11 +85,13 @@ def save_image(image, output_path):
 
 
 def main():
+
     parser = argparse.ArgumentParser(
         description="Simple DICOM viewer with windowing and mask overlay"
     )
 
     parser.add_argument("--dicom", required=True, help="Path to DICOM file")
+
     parser.add_argument("--mask", default=None, help="Optional path to mask image")
     parser.add_argument("--window-center", type=float, default=None)
     parser.add_argument("--window-width", type=float, default=None)
@@ -100,11 +102,11 @@ def main():
 
     file_path = args.dicom
 
-if file_path.endswith(".nii") or file_path.endswith(".nii.gz"):
-    image = load_nifti(file_path)
-    ds = None
-else:
-    image, ds = load_dicom(file_path)
+    if file_path.endswith(".nii") or file_path.endswith(".nii.gz"):
+        image = load_nifti(file_path)
+        ds = None
+    else:
+        image, ds = load_dicom(file_path)
     if image.ndim == 3:
        image = image[image.shape[0] // 2]
 
