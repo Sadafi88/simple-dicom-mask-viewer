@@ -13,10 +13,9 @@ Supports:
 - Read NIfTI volumes
 - Middle-slice visualization for 3D medical volumes
 - Automatic windowing
-- Custom window center/width
+- Adjustable image windowing using custom window center/width
 - Segmentation mask overlay
-- Save visualization output
-
+- Save visualization output using the `--save` option
 ## Installation
 
 ```bash
